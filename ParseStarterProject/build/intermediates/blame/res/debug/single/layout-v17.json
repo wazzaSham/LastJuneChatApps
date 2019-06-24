@@ -1,10 +1,14 @@
 [
     {
-        "merged": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
-        "source": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
-    },
-    {
         "merged": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
         "source": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
+        "source": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout-v17\\mr_media_route_list_item.xml",
+        "source": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout-v17\\mr_media_route_list_item.xml"
     }
 ]
