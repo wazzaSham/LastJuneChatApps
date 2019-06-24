@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
+        "source": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics-impl\\9.4.0\\res\\raw\\gtm_analytics"
+    },
+    {
+        "merged": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
+        "source": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics-impl\\9.4.0\\res\\raw\\gtm_analytics"
+    }
+]
