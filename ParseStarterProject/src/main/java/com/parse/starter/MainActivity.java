@@ -27,24 +27,17 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
-
 public class MainActivity extends AppCompatActivity {
 
     Boolean loginModeActive = false;
-
     public void toggleLoginMode(View view) {
-
         Button loginSignupButton = (Button) findViewById(R.id.loginSignupButton);
-
         TextView toggleLoginModeTextView = (TextView) findViewById(R.id.toggleLoginModeTextView);
 
         if (loginModeActive) {
-
             loginModeActive = false;
             loginSignupButton.setText("Sign Up");
             toggleLoginModeTextView.setText("Or, log in");
-
-
         } else {
 
             loginModeActive = true;
@@ -80,11 +73,8 @@ public class MainActivity extends AppCompatActivity {
                           message = e.getMessage().substring(e.getMessage().indexOf(" "));
 
                       }
-
                       Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
-
                   }
-
               }
           });
 
