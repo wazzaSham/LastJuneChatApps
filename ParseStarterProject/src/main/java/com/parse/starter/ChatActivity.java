@@ -33,7 +33,7 @@ public class ChatActivity extends AppCompatActivity {
 
     public void sendChat (View view){
 
-        EditText chatEditText = (EditText) findViewById(R.id.chatEditText);
+        final EditText chatEditText = (EditText) findViewById(R.id.chatEditText);
 
         ParseObject message = new ParseObject("Message");
 
@@ -41,11 +41,18 @@ public class ChatActivity extends AppCompatActivity {
         message.put("recipient", activeUser);
         message.put("message", chatEditText.getText().toString());
 
+        final String messageContent = chatEditText.getText().toString();
+
+        chatEditText.setText("");
         message.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 if (e == null){
-                    Toast.makeText(ChatActivity.this,"Message sent to " + activeUser, Toast.LENGTH_SHORT).show();
+
+                    messages.add(messageContent);
+
+                    arrayAdapter.notifyDataSetChanged();
+
                 }
             }
         });

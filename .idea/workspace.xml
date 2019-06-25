@@ -1580,9 +1580,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ChatActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+            <state relative-caret-position="-513">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding>
+                <element signature="e#1281#1595#0" expanded="true" />
+                <element signature="e#1594#1595#0" expanded="true" />
                 <element signature="e#1942#1955#0" expanded="true" />
                 <element signature="e#2144#2157#0" expanded="true" />
                 <element signature="e#2379#2404#0" expanded="true" />
@@ -1599,6 +1601,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>desc</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1901,7 +1908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561450772339</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bawah paling baru">
+      <created>1561450975947</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561450975947</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1959,7 +1973,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="revan" />
     <MESSAGE value="IT'S ALIIIIIIVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="IT'S ALIIIIIIVE" />
+    <MESSAGE value="bawah paling baru" />
+    <option name="LAST_COMMIT_MESSAGE" value="bawah paling baru" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/mipmap-hdpi/ic_launcher.png">
@@ -2031,9 +2046,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ChatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+        <state relative-caret-position="-513">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding>
+            <element signature="e#1281#1595#0" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
             <element signature="e#1942#1955#0" expanded="true" />
             <element signature="e#2144#2157#0" expanded="true" />
             <element signature="e#2379#2404#0" expanded="true" />
