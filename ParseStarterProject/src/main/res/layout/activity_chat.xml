@@ -22,9 +22,14 @@
         android:id="@+id/chatListView"
         android:layout_width="395dp"
         android:layout_height="650dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="InvalidId" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="InvalidId"
+        tools:layout_editor_absoluteY="8dp" />
 
     <Button
         android:id="@+id/sendBtn"
