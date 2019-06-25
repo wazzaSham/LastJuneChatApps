@@ -244,12 +244,20 @@
         "source": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.4.0\\res\\layout\\cast_expanded_controller_activity.xml"
     },
     {
+        "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_chat.xml",
+        "source": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
         "merged": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "D:\\UserData\\WhastAppAndroidProject\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_list.xml",
+        "source": "C:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\src\\main\\res\\layout\\activity_user_list.xml"
     },
     {
         "merged": "D:\\Users\\robpercival\\Desktop\\Whatsapp\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_layout.xml",

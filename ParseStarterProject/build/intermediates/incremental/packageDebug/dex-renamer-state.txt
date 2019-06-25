@@ -1,7 +1,7 @@
-#Mon Jun 24 14:50:09 SGT 2019
+#Tue Jun 25 14:33:47 SGT 2019
 base.0=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes2.dex
 base.1=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-file.0=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes2.dex
+file.0=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

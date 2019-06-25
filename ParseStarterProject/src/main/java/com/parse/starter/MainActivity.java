@@ -30,6 +30,16 @@ import com.parse.SignUpCallback;
 public class MainActivity extends AppCompatActivity {
 
     Boolean loginModeActive = false;
+
+    public void redirectIfLoggedIn(){
+
+        if(ParseUser.getCurrentUser() != null){
+
+            Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+            startActivity(intent);
+        }
+
+    }
     public void toggleLoginMode(View view) {
         Button loginSignupButton = (Button) findViewById(R.id.loginSignupButton);
         TextView toggleLoginModeTextView = (TextView) findViewById(R.id.toggleLoginModeTextView);
@@ -64,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
                       Log.i("Info", "user logged in");
 
+                      redirectIfLoggedIn();
+
                   } else {
 
                       String message = e.getMessage();
@@ -95,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
                       Log.i("Info", "user signed up");
 
+                      redirectIfLoggedIn();
                   } else {
 
                       String message = e.getMessage();
@@ -121,7 +134,8 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
       setTitle("Whatsapp Login");
-    
+
+      redirectIfLoggedIn();
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
 
