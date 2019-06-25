@@ -84,7 +84,7 @@ public class ChatActivity extends AppCompatActivity {
 
         ParseQuery<ParseObject> query = ParseQuery.or(queries);
 
-        query.orderByDescending("createdAt");
+        query.orderByAscending("createdAt");
 
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
