@@ -1,4 +1,4 @@
-#Tue Jun 25 14:33:47 SGT 2019
+#Tue Jun 25 15:14:10 SGT 2019
 base.0=C\:\\Users\\Asus\\AndroidStudioProjects\\LastJuneChatApps\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.1=classes2.dex
 renamed.0=classes.dex
