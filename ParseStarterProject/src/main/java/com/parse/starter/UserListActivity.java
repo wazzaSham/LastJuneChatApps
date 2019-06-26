@@ -3,9 +3,11 @@ package com.parse.starter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -21,6 +23,7 @@ import java.util.List;
 public class UserListActivity extends AppCompatActivity {
     ArrayList<String>users;
     ArrayAdapter arrayAdapter;
+    Button logOutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,15 @@ public class UserListActivity extends AppCompatActivity {
         });
         users.clear();
         arrayAdapter  = new ArrayAdapter(this, android.R.layout.simple_list_item_1, users);
+        logOutBtn = (Button)findViewById(R.id.Logout_button);
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToMain = new Intent(getApplicationContext(),MainActivity.class);
+                ParseUser.logOut();
+                startActivity(goToMain);
+            }
+        });
         userListView.setAdapter(arrayAdapter);
         ParseQuery<ParseUser> query = ParseUser.getQuery();
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
