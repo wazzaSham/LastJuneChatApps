@@ -7,31 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-    <EditText
-        android:id="@+id/chatEditText"
-        android:layout_width="244dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="OnClick" />
 
     <ListView
         android:id="@+id/chatListView"
-        android:layout_width="319dp"
-        android:layout_height="635dp"
+        android:layout_width="401dp"
+        android:layout_height="650dp"
+        android:layout_gravity="bottom"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:foregroundGravity="bottom"
+        android:gravity="bottom"
+        android:stackFromBottom="true"
         app:layout_constraintBottom_toTopOf="@+id/chatEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="InvalidId" />
+    <EditText
+        android:id="@+id/chatEditText"
+        android:layout_width="244dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -43,6 +47,7 @@
         android:onClick="sendChat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/chatEditText"
         app:srcCompat="@android:drawable/ic_menu_send" />
 
