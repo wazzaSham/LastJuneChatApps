@@ -29,7 +29,7 @@ public class ChatActivity extends AppCompatActivity {
         message.put("sender", ParseUser.getCurrentUser().getUsername());
         message.put("recipient", activeUser);
         message.put("message", chatEditText.getText().toString());
-        final String messageContent = chatEditText.getText().toString() + " || " + new Date();
+        final String messageContent = chatEditText.getText().toString();
         chatEditText.setText("");
         message.saveInBackground(new SaveCallback() {
             @Override
