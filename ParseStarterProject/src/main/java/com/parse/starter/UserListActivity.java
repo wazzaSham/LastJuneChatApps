@@ -19,9 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserListActivity extends AppCompatActivity {
-
     ArrayList<String>users;
-
     ArrayAdapter arrayAdapter;
 
     @Override
@@ -29,31 +27,21 @@ public class UserListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_list);
         users = new ArrayList<String>();
-
         setTitle("User List");
-
         ListView userListView = (ListView) findViewById(R.id.userListView);
-
         userListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
-
                 intent.putExtra("username", users.get(i));
-
                 startActivity(intent);
             }
         });
         users.clear();
-
         arrayAdapter  = new ArrayAdapter(this, android.R.layout.simple_list_item_1, users);
-
         userListView.setAdapter(arrayAdapter);
-
         ParseQuery<ParseUser> query = ParseUser.getQuery();
-
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
-
         query.findInBackground(new FindCallback<ParseUser>() {
             @Override
             public void done(List<ParseUser> objects, ParseException e) {
@@ -62,7 +50,6 @@ public class UserListActivity extends AppCompatActivity {
                         for(ParseUser user:objects){
                             users.add(user.getUsername());
                         }
-
                         arrayAdapter.notifyDataSetChanged();
                     }
                 }
