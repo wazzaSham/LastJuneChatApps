@@ -1,5 +1,6 @@
 package com.parse.starter;
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -79,5 +80,9 @@ public class ChatActivity extends AppCompatActivity {
                 }
             }
         });
+        ConstraintLayout c = (ConstraintLayout) findViewById(R.id.ChatAct);
+        int width = c.getMeasuredWidth();
+        Log.i("CHAT", String.valueOf(width));
+
     }
 }
