@@ -15,6 +15,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ChatActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class ChatActivity extends AppCompatActivity {
         message.put("sender", ParseUser.getCurrentUser().getUsername());
         message.put("recipient", activeUser);
         message.put("message", chatEditText.getText().toString());
-        final String messageContent = chatEditText.getText().toString();
+        final String messageContent = chatEditText.getText().toString() + "||" + new Date();
         chatEditText.setText("");
         message.saveInBackground(new SaveCallback() {
             @Override
