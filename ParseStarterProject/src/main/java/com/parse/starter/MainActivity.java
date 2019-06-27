@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-      setTitle("Whatsapp Login");
+      setTitle("Login");
 
       redirectIfLoggedIn();
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
