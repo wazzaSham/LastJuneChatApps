@@ -3,11 +3,14 @@ package com.parse.starter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.ToolbarWidgetWrapper;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,6 +33,7 @@ public class UserListActivity extends AppCompatActivity {
     ArrayList<String>users;
     ArrayAdapter arrayAdapter;
     Button logOutBtn;
+    ListView userListView;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -38,7 +42,7 @@ public class UserListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_list);
         users = new ArrayList<String>();
         setTitle("User List");
-        ListView userListView = (ListView) findViewById(R.id.userListView);
+        userListView = (ListView) findViewById(R.id.userListView);
         userListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -76,15 +80,69 @@ public class UserListActivity extends AppCompatActivity {
         });
 
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarUL);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarUL);
+        setSupportActionBar(toolbar);
 
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.popup_menu, menu);
+
+        MenuItem menuItem=menu.findItem(R.id.search_button);
+
+        SearchView searchView = (SearchView) menuItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (TextUtils.isEmpty(newText)){
+                    arrayAdapter.getFilter().filter("");
+                    userListView.clearTextFilter();
+                }
+                else{
+                    arrayAdapter.getFilter().filter(newText);
+                }
+                return true;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public boolean onCreateSearchMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_menu,menu);
+
+        MenuItem myActionMenuItem = menu.findItem(R.id.search_button);
+        SearchView searchView = (SearchView)myActionMenuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (TextUtils.isEmpty(newText)){
+                    arrayAdapter.getFilter().filter("");
+                    userListView.clearTextFilter();
+                }
+                else{
+                    arrayAdapter.getFilter().filter(newText);
+                }
+                return true;
+            }
+        });
+
 
         return super.onCreateOptionsMenu(menu);
     }
