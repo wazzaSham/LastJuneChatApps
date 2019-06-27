@@ -22,6 +22,7 @@ public class ChatActivity extends AppCompatActivity {
     String activeUser = "";
     ArrayList<String> messages = new ArrayList<>();
     ArrayAdapter arrayAdapter;
+    EditText chatEditTxt;
 
     public void sendChat (View view){
         final EditText chatEditText = (EditText) findViewById(R.id.chatEditText);
@@ -40,10 +41,7 @@ public class ChatActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +54,34 @@ public class ChatActivity extends AppCompatActivity {
         ListView chatListView = (ListView) findViewById(R.id.chatListView);
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
         chatListView.setAdapter(arrayAdapter);
+        retrieveAllMessages();
+
+        Thread t  = new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        retrieveAllMessages();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        t.start();
+
+        chatEditTxt = (EditText)findViewById(R.id.chatEditText);
+        chatEditTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("TAG","Clicked");
+            }
+        });
+    }
+
+    public void retrieveAllMessages(){
         ParseQuery<ParseObject> query1 = new ParseQuery<ParseObject>("Message");
         query1.whereEqualTo("sender", ParseUser.getCurrentUser().getUsername());
         query1.whereEqualTo("recipient", activeUser);
@@ -85,9 +111,6 @@ public class ChatActivity extends AppCompatActivity {
                 }
             }
         });
-        ConstraintLayout c = (ConstraintLayout) findViewById(R.id.ChatAct);
-        int width = c.getMeasuredWidth();
-        Log.i("CHAT", String.valueOf(width));
-
     }
+
 }

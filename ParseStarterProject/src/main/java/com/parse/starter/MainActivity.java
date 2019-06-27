@@ -46,11 +46,9 @@ public class MainActivity extends AppCompatActivity {
             loginSignupButton.setText("Sign Up");
             toggleLoginModeTextView.setText("Or, log in");
         } else {
-
             loginModeActive = true;
             loginSignupButton.setText("Log In");
             toggleLoginModeTextView.setText("Or, sign up");
-
         }
     }
 
