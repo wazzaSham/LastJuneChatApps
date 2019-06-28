@@ -101,7 +101,7 @@ public class ChatActivity extends AppCompatActivity {
                     if(objects.size() > 0){
                         messages.clear();
                         for (ParseObject message : objects){
-                            String messageContent = cipher.decrypt(message.getString("message") ;
+                            String messageContent = cipher.decrypt(message.getString("message")) ;
                             if(!message.getString("sender").equals(ParseUser.getCurrentUser().getUsername())){
                                 messageContent = "> " + messageContent;
                             }
