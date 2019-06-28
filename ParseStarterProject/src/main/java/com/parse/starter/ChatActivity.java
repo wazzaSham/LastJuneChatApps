@@ -23,13 +23,14 @@ public class ChatActivity extends AppCompatActivity {
     ArrayList<String> messages = new ArrayList<>();
     ArrayAdapter arrayAdapter;
     EditText chatEditTxt;
+    Cipher cipher;
 
     public void sendChat (View view){
         final EditText chatEditText = (EditText) findViewById(R.id.chatEditText);
         ParseObject message = new ParseObject("Message");
         message.put("sender", ParseUser.getCurrentUser().getUsername());
         message.put("recipient", activeUser);
-        message.put("message", chatEditText.getText().toString());
+        message.put("message", cipher.encrypt(chatEditText.getText().toString()));
         final String messageContent = chatEditText.getText().toString();
         chatEditText.setText("");
         message.saveInBackground(new SaveCallback() {
@@ -48,6 +49,7 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         Intent intent = getIntent();
+        cipher = new Cipher();
         activeUser = intent.getStringExtra("username");
         setTitle("Chat with " + activeUser);
         Log.i("Info", activeUser);
@@ -71,7 +73,6 @@ public class ChatActivity extends AppCompatActivity {
             }
         };
         t.start();
-
         chatEditTxt = (EditText)findViewById(R.id.chatEditText);
         chatEditTxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +101,8 @@ public class ChatActivity extends AppCompatActivity {
                     if(objects.size() > 0){
                         messages.clear();
                         for (ParseObject message : objects){
-                            String messageContent = message.getString("message");
+                            String messageContent = message.getString("message")
+                                    + " | Dec to => " + cipher.decrypt(message.getString("message")) ;
                             if(!message.getString("sender").equals(ParseUser.getCurrentUser().getUsername())){
                                 messageContent = "> " + messageContent;
                             }
